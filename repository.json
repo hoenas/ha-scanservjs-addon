@@ -1,5 +1,5 @@
 {
-    "name": "CUPS HA Addon (x86 Compatible)",
-    "url": "https://github.com/niallr/ha-cups-addon",
+    "name": "scanservjs HA Addon (x86 Compatible)",
+    "url": "https://github.com/niallr/ha-scanservjs-addon",
     "maintainer": "niallr"
 }
