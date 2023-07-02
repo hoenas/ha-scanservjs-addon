@@ -19,8 +19,10 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 #            libusb
 
 # As mentioned in end of section https://github.com/sbs20/scanservjs/blob/master/docs/docker.md#accessing-hardware
-COPY brscan4-0.4.11-1.amd64.deb "$APP_DIR/brscan4-0.4.11-1.amd64.deb"
-RUN apt install -yq "$APP_DIR/brscan4-0.4.11-1.amd64.deb"
+COPY brscan4-0.4.11-1.amd64.deb "/tmp/brscan4-0.4.11-1.amd64.deb"
+RUN apt install -yq "/tmp/brscan4-0.4.11-1.amd64.deb"
+
+echo "brother4" > /etc/sane.d/dll.conf
 # RUN brsaneconfig4 -a name=ADS-2600W model=ADS-2600W nodename=10.0.100.30
 
 #ADD --chmod=777 run.sh /run.sh
