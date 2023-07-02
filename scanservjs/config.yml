@@ -17,6 +17,7 @@ ports_description:
   8080/tcp: scanservjs Web interface
 homeassistant_api: true
 ingress: true
+ingress_port: 8080
 panel_icon: mdi:scanner
 options:
   saned_net_hosts: ""
