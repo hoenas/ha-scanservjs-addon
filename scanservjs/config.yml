@@ -1,29 +1,30 @@
-name: scanservjs
-version: v2.26.1-5
+name: "scanservjs Scan Server"
+version: 1.0.0
 slug: scanservjs
 description: scanservjs is a web UI frontend for your scanner
+url: https://github.com/niallr/ha-scanservjs-addon
 arch:
+  - armhf
   - armv7
-  - aarch64
   - amd64
-startup: application
-boot: auto
-icon: icon.png
-logo: icon.png
-webui: http://[HOST]:[PORT:8080]/
+  - i386
+#startup: application
+#boot: auto
+#webui: http://[HOST]:[PORT:8080]/
 map:
   - ssl
   - share:rw
-apparmor: true
+#apparmor: true
 ports:
   8080/tcp: 8080
 ports_description:
   8080/tcp: scanservjs Web interface
-full_access: true
-host_network: true
-host_dbus: true
+#full_access: true
+homeassistant_api: true
+#host_network: true
+#host_dbus: true
 ingress: true
-ingress_port: 8080
+#ingress_port: 8080
 panel_icon: mdi:scanner
 options:
   saned_net_hosts: ""
