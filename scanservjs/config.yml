@@ -10,6 +10,7 @@ arch:
   - i386
 icon: icon.png
 logo: icon.png
+apparmor: true
 map:
   - ssl
   - share:rw
