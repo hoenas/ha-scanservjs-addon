@@ -13,20 +13,6 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && mv /tmp/bashio/lib /usr/lib/bashio \
     && ln -s /usr/lib/bashio/bashio /usr/bin/bashio
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        colord \
-        printer-driver-all \
-        printer-driver-gutenprint \
-        openprinting-ppds \
-        hpijs-ppds \
-        hp-ppd  \
-        hplip \
-        printer-driver-brlaser \
-        printer-driver-foo2zjs \
-        gnupg2 \
-        lsb-release
-
 #ADD --chmod=777 run.sh /run.sh
 #ENTRYPOINT [ "/run.sh" ]
 
