@@ -37,3 +37,4 @@ schema:
   scanimage_list_ignore: bool?
   devices: str?
   ocr_lang: str?
+usb: true
