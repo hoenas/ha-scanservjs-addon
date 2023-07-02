@@ -8,23 +8,15 @@ arch:
   - armv7
   - amd64
   - i386
-#startup: application
-#boot: auto
-#webui: http://[HOST]:[PORT:8080]/
 map:
   - ssl
   - share:rw
-#apparmor: true
 ports:
   8080/tcp: 8080
 ports_description:
   8080/tcp: scanservjs Web interface
-#full_access: true
 homeassistant_api: true
-#host_network: true
-#host_dbus: true
 ingress: true
-#ingress_port: 8080
 panel_icon: mdi:scanner
 options:
   saned_net_hosts: ""
