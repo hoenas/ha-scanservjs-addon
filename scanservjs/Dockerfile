@@ -13,5 +13,10 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && mv /tmp/bashio/lib /usr/lib/bashio \
     && ln -s /usr/lib/bashio/bashio /usr/bin/bashio
 
-ADD --chmod=777 run.sh /run.sh
-ENTRYPOINT [ "/run.sh" ]
+#ADD --chmod=777 run.sh /run.sh
+#ENTRYPOINT [ "/run.sh" ]
+
+RUN ["chmod", "+x", "/run.sh"]
+EXPOSE 8080
+
+CMD ["/run.sh"]
