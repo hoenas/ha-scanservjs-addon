@@ -35,4 +35,5 @@ schema:
   scanimage_list_ignore: bool?
   devices: str?
   ocr_lang: str?
+  copy_scans_to: str
 usb: true
