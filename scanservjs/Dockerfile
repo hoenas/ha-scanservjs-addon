@@ -13,6 +13,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && mv /tmp/bashio/lib /usr/lib/bashio \
     && ln -s /usr/lib/bashio/bashio /usr/bin/bashio
 
+COPY config.default.js /etc/scanservjs/config.default.js
 COPY run.sh /run.sh
 RUN ["chmod", "+x", "/run.sh"]
 EXPOSE 8080
