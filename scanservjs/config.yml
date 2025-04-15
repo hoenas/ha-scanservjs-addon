@@ -1,8 +1,8 @@
 name: "scanservjs Scan Server"
-version: 1.0.2
+version: 1.0.3
 slug: scanservjs
 description: scanservjs is a web UI frontend for your scanner
-url: https://github.com/niallr/ha-scanservjs-addon
+url: https://github.com/hoenas/ha-scanservjs-addon
 arch:
   - armhf
   - armv7
