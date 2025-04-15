@@ -2,6 +2,7 @@
 const options = { paths: ['/usr/lib/scanservjs'] };
 const Process = require(require.resolve('./server/classes/process', options));
 const dayjs = require(require.resolve('dayjs', options));
+const copy_scan_dir = process.env.copy_scans_to
 
 /**
  * This file is ignored. If you want to apply overrides, make a copy in this
@@ -123,7 +124,7 @@ module.exports = {
      */
     async afterScan(fileInfo) {
         // Copy the file to the paperless consume directory
-        return await Process.spawn(`cp '${fileInfo.fullname}' /media/paperless/consume/`);
+        return await Process.spawn(`cp '${fileInfo.fullname}' '${copy_scan_dir}'`);
     },
 
     /**

@@ -28,6 +28,7 @@ options:
   scanimage_list_ignore: false 
   devices: ""
   ocr_lang: eng
+  copy_scans_to: "/media/scanservjs/"
 schema:
   saned_net_hosts: str?
   airscan_devices: str?
