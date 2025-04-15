@@ -1,4 +1,4 @@
-# scanservjs Home Assistant Addon (x86 Compatible)
+# scanservjs Home Assistant Addon
 
 # Description
 
