@@ -1,4 +1,4 @@
-FROM sbs20/scanservjs
+FROM sbs20/scanservjs:v3.0.3
 
 RUN export DEBIAN_FRONTEND=noninteractive \
     && apt update \
@@ -13,6 +13,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && mv /tmp/bashio/lib /usr/lib/bashio \
     && ln -s /usr/lib/bashio/bashio /usr/bin/bashio
 
+COPY run.sh /run.sh
 RUN ["chmod", "+x", "/run.sh"]
 EXPOSE 8080
 
