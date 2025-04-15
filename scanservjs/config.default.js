@@ -124,6 +124,7 @@ module.exports = {
      */
     async afterScan(fileInfo) {
         // Copy the file to the paperless consume directory
+        console.log("Copying '${fileInfo.fullname}' to '${copy_scan_dir}'...");
         return await Process.spawn(`cp '${fileInfo.fullname}' '${copy_scan_dir}'`);
     },
 
