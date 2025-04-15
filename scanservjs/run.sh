@@ -38,6 +38,7 @@ fi
 export SCANIMAGE_LIST_IGNORE=$(jq -r '.scanimage_list_ignore' $CONFIG_PATH)
 export DEVICES=$(jq -r '.devices' $CONFIG_PATH)
 export OCR_LANG=$(jq -r '.ocr_lang' $CONFIG_PATH)
+export COPY_SCANS_TO=$(jq -r '.copy_scans_to' $CONFIG_PATH)
 
 unset IFS
 set +f
