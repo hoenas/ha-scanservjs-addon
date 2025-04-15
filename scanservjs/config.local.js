@@ -2,7 +2,6 @@
 const options = { paths: ['/usr/lib/scanservjs'] };
 const Process = require(require.resolve('./server/classes/process', options));
 const dayjs = require(require.resolve('dayjs', options));
-const copy_scan_dir = process.env.COPY_SCANS_TO
 
 /**
  * This file is ignored. If you want to apply overrides, make a copy in this
@@ -124,7 +123,7 @@ module.exports = {
    */
   async afterScan(fileInfo) {
     // Copy the file to the specified directory
-    return await Process.spawn(`cp '${fileInfo.fullname}' '${copy_scan_dir}'`);
+    return await Process.spawn(`cp '${fileInfo.fullname}' '${process.env.COPY_SCANS_TO}'`);
   },
 
   /**
