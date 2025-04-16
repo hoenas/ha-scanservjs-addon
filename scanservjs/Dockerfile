@@ -17,6 +17,3 @@ COPY config.local.js /etc/scanservjs/config.local.js
 COPY run.sh /run.sh
 RUN ["chmod", "+x", "/run.sh"]
 EXPOSE 8080
-
-CMD ["/run.sh"]
-ENTRYPOINT ["/run.sh"]
