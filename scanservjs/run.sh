@@ -43,5 +43,7 @@ export COPY_SCANS_TO=$(jq -r '.copy_scans_to' $CONFIG_PATH)
 unset IFS
 set +f
 bashio::log.info "COPY_SCANS_TO=$COPY_SCANS_TO"
+rm -r /var/lib/scanservjs/output
+ln -s $COPY_SCANS_TO /var/lib/scanservjs/output
 mkdir -p $COPY_SCANS_TO
 node ./server/server.js
