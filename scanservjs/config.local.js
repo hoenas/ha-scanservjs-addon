@@ -125,7 +125,7 @@ module.exports = {
     // Copy the file to the specified directory
     copy_destination = process.env.COPY_SCANS_TO
     // TODO: Fix location
-    // return await Process.spawn(`cp '${fileInfo.fullname}' '${process.env.COPY_SCANS_TO}/'`);
+    return await Process.spawn(`cp '${fileInfo.fullname}' '${process.env.COPY_SCANS_TO}/'`);
   },
 
   /**
