@@ -3,10 +3,7 @@ const options = { paths: ['/usr/lib/scanservjs'] };
 const Process = require(require.resolve('./server/classes/process', options));
 const dayjs = require(require.resolve('dayjs', options));
 
-/**
- * This file is ignored. If you want to apply overrides, make a copy in this
- * location and name it `config.local.js`. Then make the necessary changes.
- */
+
 module.exports = {
   /**
    * @param {Configuration} config
@@ -123,8 +120,6 @@ module.exports = {
    */
   async afterScan(fileInfo) {
     // Copy the file to the specified directory
-    copy_destination = process.env.COPY_SCANS_TO
-    // TODO: Fix location
     return await Process.spawn(`cp '${fileInfo.fullname}' '${process.env.COPY_SCANS_TO}/'`);
   },
 
