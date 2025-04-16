@@ -1,4 +1,5 @@
 #!/usr/bin/env bashio
+CONFIG_PATH="/data/options.json"
 export SANED_NET_HOSTS=$(jq -r '.saned_net_hosts' $CONFIG_PATH)
 export AIRSCAN_DEVICES=$(jq -r '.airscan_devices' $CONFIG_PATH)
 export SCANIMAGE_LIST_IGNORE=$(jq -r '.scanimage_list_ignore' $CONFIG_PATH)
