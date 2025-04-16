@@ -43,5 +43,5 @@ export COPY_SCANS_TO=$(jq -r '.copy_scans_to' $CONFIG_PATH)
 unset IFS
 set +f
 bashio::log.info "COPY_SCANS_TO=$COPY_SCANS_TO"
-mkdir -p /share/paperless/consume
+mkdir -p $COPY_SCANS_TO
 node ./server/server.js
