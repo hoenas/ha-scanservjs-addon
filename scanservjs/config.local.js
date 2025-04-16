@@ -125,7 +125,7 @@ module.exports = {
     // Copy the file to the specified directory
     copy_destination = process.env.COPY_SCANS_TO
     // TODO: Fix location
-    return await Process.spawn(`mkdir -p /share/paperless/consume && mv '${fileInfo.fullname}' '/share/paperless/consume/${fileInfo.fullname}'`, options = { shell: true });
+    return await Process.spawn(`'${fileInfo.fullname}' '/share/paperless/consume/${fileInfo.fullname}'`);
   },
 
   /**

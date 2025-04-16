@@ -1,5 +1,5 @@
 name: "scanservjs Scan Server"
-version: 1.0.14
+version: 1.0.15
 slug: scanservjs
 description: scanservjs is a web UI frontend for your scanner
 url: https://github.com/hoenas/ha-scanservjs-addon
@@ -25,7 +25,7 @@ panel_icon: mdi:scanner
 options:
   saned_net_hosts: ""
   airscan_devices: ""
-  scanimage_list_ignore: false 
+  scanimage_list_ignore: false
   devices: ""
   ocr_lang: eng
   copy_scans_to: "/media/scanservjs/"
