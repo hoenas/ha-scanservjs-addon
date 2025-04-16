@@ -35,6 +35,14 @@ if [ ! -z "$AIRSCAN_DEVICES" ]; then
   done
 fi
 
+# Insert pixma hosts
+if [ ! -z "$PIXMA_HOSTS" ]; then
+  hosts=$(echo $PIXMA_HOSTS | sed "s/$DELIMITER/\n/")
+  for host in $hosts; do
+    echo "bjnp://$host" >> /etc/sane.d/pixma.conf
+  done
+fi
+
 export SCANIMAGE_LIST_IGNORE=$(jq -r '.scanimage_list_ignore' $CONFIG_PATH)
 export DEVICES=$(jq -r '.devices' $CONFIG_PATH)
 export OCR_LANG=$(jq -r '.ocr_lang' $CONFIG_PATH)
