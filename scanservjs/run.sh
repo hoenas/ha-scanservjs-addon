@@ -38,10 +38,11 @@ fi
 export SCANIMAGE_LIST_IGNORE=$(jq -r '.scanimage_list_ignore' $CONFIG_PATH)
 export DEVICES=$(jq -r '.devices' $CONFIG_PATH)
 export OCR_LANG=$(jq -r '.ocr_lang' $CONFIG_PATH)
-export COPY_SCANS_TO=$(jq -r '.copy_scans_to' $CONFIG_PATH)
+
+export COPY_SCANS_TO=$(bashio::config 'copy_scans_to'
+bashio::log.info "[Info] Copy scans to ${COPY_SCANS_TO}"
 
 unset IFS
 set +f
-bashio::log.info "COPY_SCANS_TO=$COPY_SCANS_TO"
 mkdir -p $COPY_SCANS_TO
 node ./server/server.js
